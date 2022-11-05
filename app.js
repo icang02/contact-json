@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs'); // set view engine
 app.use(expressEjsLayouts); // Third=party middleware

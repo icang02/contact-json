@@ -1,0 +1,44 @@
+<div class="card px-3 py-4 mb-5" style="max-width: 32rem;">
+  <h2 class="mb-4">Tambah Contact</h2>
+
+  <% if (typeof errors != 'undefined') { %>
+    <div class="alert alert-danger">
+      <ul>
+        <% errors.forEach(error => { %>
+          <li> <%= error.msg %> </li>
+        <% }) %>
+      </ul>
+    </div>
+  <% } %>
+
+  <form action="/contact/add" method="post">
+    <div class="mb-3">
+      <label for="nama" class="form-label">Nama</label>
+      <input type="text" class="form-control" id="nama" name="nama" value="<%= contact.length == 0 ? '' : contact[0].nama %>" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="noHp" class="form-label">No Hp</label>
+      <input type="number" class="form-control" id="noHp" name="noHp" value="<%= contact.length == 0 ? '' : contact[0].noHp %>" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" value="<%= contact.length == 0 ? '' : contact[0].email %>" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="alamat" class="form-label">Alamat</label>
+      <input type="text" class="form-control" id="alamat" name="alamat" value="<%= contact.length == 0 ? '' : contact[0].alamat %>" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="kota" class="form-label">Kota</label>
+      <input type="text" class="form-control" id="kota" name="kota" value="<%= contact.length == 0 ? '' : contact[0].kota %>" required>
+    </div>
+
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary">Kirim</button>
+    </div>
+  </form>
+</div>

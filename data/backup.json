@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nama": "Ilmi Faizan",
+    "noHp": "081371712890",
+    "email": "ilmifaizan1112@gmail.com",
+    "alamat": "Kelurahan Talia, Kecamatan Abeli",
+    "kota": "Kendari"
+  },
+  {
+    "id": 2,
+    "nama": "Imam Saputra",
+    "noHp": "081341770730",
+    "email": "imamsaputra@gmail.com",
+    "alamat": "Desa Tolowe Ponre Waru, Kecamatan Wolo",
+    "kota": "Kolaka"
+  },
+  {
+    "id": 3,
+    "nama": "Nur Afdhaliyah",
+    "noHp": "085241545412",
+    "email": "aliyah@gmail.com",
+    "alamat": "Kelurahan Talia, Kecamatan Abeli",
+    "kota": "Kendari"
+  }
+]

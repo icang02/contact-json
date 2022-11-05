@@ -1,0 +1,28 @@
+<% if (!contact) { %>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="alert alert-danger">
+        Contact tidak ditemukan
+        <a href="/contact" class="card-link text-decoration-none d-block mt-3">&laquo; Kembali</a>
+      </div>
+    </div>
+  </div>
+<% } else { %>
+  <div class="row">
+    <div class="card col-md-4">
+      <div class="card-body">
+        <h5 class="card-title fw-bold"> <%= contact.nama %> </h5>
+        <p class="card-text"> <%= contact.noHp %> </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"> <%= contact.email %> </li>
+        <li class="list-group-item"> <%= contact.alamat %> </li>
+        <li class="list-group-item"> <%= contact.kota %> </li>
+      </ul>
+      <div class="card-body d-flex justify-content-between">
+        <a href="/contact" class="card-link text-decoration-none">&laquo; Kembali</a>
+        <a href="/contact/edit/<%= contact.id %>" class="btn btn-primary btn-sm">Ubah</a>
+      </div>
+    </div>
+  </div>
+<% } %>

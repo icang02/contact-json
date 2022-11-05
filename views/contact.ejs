@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-md-8">
+    <h2> Daftar Contact </h2>
+    <a href="/contact/add" class="btn btn-primary my-3">Tambah Data</a>
+    
+    <% if (msg.length != 0) { %>
+      <div class="alert alert-success"> <%= msg %> </div>
+    <% } %>
+
+    <% if (contacts.length == 0) { %>
+      <div class="alert alert-danger">Belum ada daftar contact</div>
+    <% } else { %>
+      <div class="card desktop">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nama</th>
+                <th scope="col">No Hp</th>
+                <th scope="col">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% contacts.forEach((contact, index)=> { %>
+                <tr>
+                  <th scope="row">
+                    <%= index+1 %>
+                  </th>
+                  <td>
+                    <%= contact.nama %>
+                  </td>
+                  <td>
+                    <%= contact.noHp %>
+                  </td>
+                  <td>
+                    <a href="/contact/<%= contact.id %>" class="btn btn-success badge">Detail</a>
+                    <a href="/contact/delete/<%= contact.id %>" class="btn btn-danger badge" onclick="return confirm('Hapus contact?')">Hapus</a>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mobile">
+        <div class="card">
+          <div class="card-header">
+            Semua Kontak
+          </div>
+          <ul class="list-group list-group-flush">
+            <% contacts.forEach((contact, index) => { %>
+              <li class="list-group-item d-flex justify-content-between">
+                <div>
+                  <div> <%= contact.nama %> </div>
+                </div>
+
+                <div class="d-flex">
+                  <span class="text-muted me-4"> <%= contact.noHp %> </span>
+                  <div class="div">
+                    <a href="/contact/<%= contact.id %>" class="btn btn-primary badge"> <i class="bi bi-pencil-square"></i> </a>
+                    <a href="/contact/delete/<%= contact.id %>" class="btn btn-danger badge" onclick="return confirm('Hapus contact?')"> <i class="bi bi-x-square"></i> </a>
+                  </div>
+                </div>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</div>

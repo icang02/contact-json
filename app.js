@@ -19,7 +19,8 @@ const port = process.env.PORT || 3000;
 app.set("view engine", "ejs"); // set view engine
 app.use(expressEjsLayouts); // Third=party middleware
 app.use("/", express.static(__dirname + "/public"));
-app.use("/contact", express.static(__dirname + "/public"));
+app.use("/contact/", express.static(__dirname + "/public"));
+app.use("/contact/edit", express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 
 // konfigurasi flash message

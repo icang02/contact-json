@@ -1,1 +1,18 @@
-[{"noHp":"081371712890","email":"ilmifaizan1112@gmail.com","alamat":"Talia Abeli","kota":"Kendari","id":1,"nama":"Icang"},{"nama":"Kamal","noHp":"081371712892","email":"hapida@gmail.com","alamat":"Talia","kota":"Kendari","id":2}]
+[
+  {
+    "noHp": "081371712890",
+    "email": "ilmifaizan1112@gmail.com",
+    "alamat": "Talia Abeli",
+    "kota": "Kendari",
+    "id": 1,
+    "nama": "Icang"
+  },
+  {
+    "nama": "Kamal",
+    "noHp": "081371712892",
+    "email": "hapida@gmail.com",
+    "alamat": "Talia",
+    "kota": "Kendari",
+    "id": 2
+  }
+]
